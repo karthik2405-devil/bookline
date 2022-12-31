@@ -17,4 +17,8 @@ app.listen(port, '0.0.0.0', () => {
   console.log(`Server listening on port ${port}`);
 });
 
+app.get("/", (req, res) => {
+  res.send("Use Postman to send API requests - Available routes are /api/users, /api/students, /api/class/details, /api/class/marks/:class/:subject")
+})
+
 module.exports = app;
